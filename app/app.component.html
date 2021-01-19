@@ -1,0 +1,17 @@
+<hello name="{{ name }}"></hello>
+<p>
+	Start editing to see some magic happen :)
+</p>
+
+<label>Team:</label>
+<select [(ngModel)]="selectedTeam.id" (change)="onSelectTeam($event.target.value)">
+                <option value="0">--Select--</option>
+                <option *ngFor="let team of teams" value={{team.id}}>{{team.name}}</option>
+            </select>
+<div>
+	<label>Channel:</label>
+	<select>
+                    <option value="0">--Select--</option>
+                    <option *ngFor="let channel of channels " value={{channel.id}}>{{channel.name}}</option>
+                </select>
+</div>
